@@ -9,7 +9,7 @@ Projeyi kendi bilgisayarımızda visual studio code üzerinden açıyoruz.
 Terminali açıp 'npm start' komutu ile projeyi başlatabiliriz.
 Daha sonra tarayıcımızdan http://localhost:3000/blog adresini arattığımızda projemiz karşımıza gelmiş olacaktır.
 
-## Proje Görselleri
+## Proje İçi Bazı Görselleri
 
 ### Anasayfa
 ![BlogAnaSayfa](https://user-images.githubusercontent.com/71833177/150979587-ed4ac59f-9450-4380-aed2-30b6393882e4.PNG)
@@ -18,3 +18,4 @@ Daha sonra tarayıcımızdan http://localhost:3000/blog adresini arattığımız
 ![BlogAdminSayfası](https://user-images.githubusercontent.com/71833177/150980180-db4f7575-ef58-4583-957d-cbd414035dec.PNG)
 
 ### Post Ekleme Formu
+![BlogPostEkle](https://user-images.githubusercontent.com/71833177/150980364-ddcee158-45bb-4877-9c79-38adcd4a9ccb.PNG)
