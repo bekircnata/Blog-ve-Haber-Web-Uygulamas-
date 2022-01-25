@@ -1,0 +1,66 @@
+<!-- <ANASAYFA> -->
+<section id="blog" class="md-padding">
+	<div class="container">
+		
+		<div class="row">
+
+			<!-- <Flash Message> -->
+				{{!-- {{#if sessionFlash.message}}
+				<div class="{{sessionFlash.type}}">
+					{{sessionFlash.message}}
+				</div>
+				{{/if}} --}}
+			<!-- </Flash Message> -->
+
+			<main id="main" class="col-md-8">
+				<!-- <Blog Posts> -->
+				<div class="row">
+					{{#each posts}} 
+					<div class="col-md-6">
+						<div class="blog homeBlog lightMode">
+							<div class="blog-img">
+								<a href="/posts/{{_id}}">
+									<img src="{{postImage}}" class="img-fluid">
+								</a>
+							</div>
+							<div class="blog-content">
+								<ul class="blog-meta">
+									<li><i class="fas fa-users"></i><span class="writer">{{author.username}}</span></li>
+									<li><i class="fas fa-clock"></i><span class="writer">{{generateDate date 'MMM DD
+											YYYY'}}</span></li>
+								</ul>
+								<h3>{{title}}</h3>
+				
+								<p>{{{truncate content}}}</p>
+								
+								<a href="/posts/{{_id}}">Devamını Oku</a>
+							</div>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+				<!-- </Blog Posts> -->
+
+				<!-- <Pagination> -->
+				<div class="row">
+						<nav class="pagination-nav" aria-label="Page navigation example">
+							<ul class="pagination justify-content-center">
+								
+								{{#paginate current=current pages=pages}}
+								{{/paginate}}
+
+							</ul>
+						</nav>
+				</div>
+				<!-- </Pagination> -->
+				
+			</main>
+
+			<!-- <Sidebar> -->
+			{{> sidebar}}
+			<!-- </Sidebar> -->
+
+		</div>
+
+	</div>
+</section>

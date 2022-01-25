@@ -1,0 +1,77 @@
+<aside id="aside" class="col-md-4">
+    <!-- Search -->
+    <div class="widget">
+        <div class="widget-search">
+            <form action="/posts/search" method="GET">
+                <input class="search-input form-control" type="text" name="look" placeholder="Search">
+                <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    <!-- /Search -->
+
+    <!-- Category Sidebar  -->
+    <div class="widget">
+        <h3 class="mb-3">Kategoriler</h3>
+        <div class="widget-category">
+            {{#each categories}}
+            <a href="/posts/category/{{_id}}">{{name}}<span>({{num_of_posts}})</span></a>
+            {{/each}}
+        </div>
+    </div>
+    <!-- /Category Sidebar  -->
+
+    <!-- Twitter Embed  -->
+    <div class="widget">
+        <div class="widget-twitter">
+
+            <a class="twitter-timeline" data-width="350" data-height="400" href="https://twitter.com/elonmusk?ref_src=twsrc%5Etfw">Tweets by elonmusk</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        </div>
+    </div>
+    <!-- /Twitter Embed  -->
+
+    <!-- Post Sidebar -->
+    <div class="widget">
+        <h3 class="mb-3">Son Eklenen Posts</h3>
+
+        <!-- SİNGLE POST -->
+        {{#each (limit posts 3)}}
+
+        <div class="widget-post">
+            <a href="/posts/{{_id}}">
+                <img class="img-fluid" src="{{postImage}}" alt="">{{title}}
+            </a>
+            <ul class="blog-meta">
+                <li>{{generateDate date 'MM DD YYYY'}}</li>
+            </ul>
+        </div>
+        {{/each}}
+        <!-- /SİNGLE POST -->
+
+    </div>
+    <!-- /Post Sidebar -->
+
+    <!-- Exchange Embed  -->
+    <div class="widget">
+        <div class="widget-exchange">
+
+            <script type="text/javascript">
+            var kurlist=",ONS,USD,EUR,GRA,1,1027,";
+            var genislik=350;
+            var bbg="FF0000";
+            var yr="000000";
+            var zbg="FFFFFF";
+            var br="FF0000";
+            var by="Döviz Fiyatları"
+            </script>
+            <ins data-client-id="mb-095720171805"></ins>
+            <a id="bplnk" href="https://www.dovizfiyat.com">Döviz Fiyatları</a>
+            <script type="text/javascript" src="https://www.dovizfiyat.com/eklenti/eklenti-min.js"></script>
+
+        </div>
+
+    </div>
+    <!-- /Exchane Embed  -->
+
+</aside>

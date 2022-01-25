@@ -1,0 +1,57 @@
+<!-- <PAGE TİTLE> -->
+<div class="row text-center postlarPage">
+	<div class="col-md-4 offset-md-4">
+		<div class="section-header">
+			<h2 class="title">Postlar</h2>
+		</div>
+	</div>
+</div>
+
+<!-- <CONTENT SECTİON> -->
+
+<section id="aboutus" class="md-padding">
+	<div class="container">
+
+		{{> admin-nav}}
+		<div class="clearfix"></div>
+		<div class="row">
+
+
+			<div class="col-md-12">
+				<table class="table postTable">
+					<thead>
+						<tr>
+							<th>Başlık</th>
+							<th>Kategori Adı</th>
+							<th>Güncelle</th>
+							<th>Sil</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each posts}}
+						<tr>
+							<td>{{title}}</td>
+							<td>{{category.name}}</td>
+							<td>
+								
+								<a class="btn btn-warning editBtn" href="/admin/posts/edit/{{id}}">Güncelle</a>
+								
+							</td>
+							<td>	
+								
+								<form action="/admin/posts/{{id}}?_method=DELETE" method="POST">
+									<input type="hidden" name="_method" value="DELETE">
+									<button type="submit" class="btn btn-danger">Sil</button>
+								</form>
+								
+							</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+</section>

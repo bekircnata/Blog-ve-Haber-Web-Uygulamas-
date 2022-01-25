@@ -1,0 +1,541 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    overflow-x: hidden;
+    color: black;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 54px;
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 12px;
+}
+h6 {
+    font-size: 11px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: .2s opacity;
+    font-size: 16px;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+    opacity: 0.8;
+    color: red;
+}
+
+.main-color {
+    color: red;
+}
+
+.white-text {
+    color: #fff;
+}
+
+
+::moz-selection {
+    background-color: red;
+    color: #fff;
+}
+
+::selection {
+    background-color: red;
+    color: #fff;
+} 
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* --- Section Properties --- */
+
+section {
+    position: relative;
+}
+
+.md-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-header {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.section-header .title {
+    text-transform: capitalize;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 60px;
+    background-color: red;
+    margin: 20px auto 0;
+}
+
+/* --- Navigation --- */
+
+.navbar-brand {
+	transition: all .5s;
+    color: white;
+}
+
+.navbar-brand:hover {
+	color: blue !important;
+}
+
+#mainNav {
+	background-color:#2a2a2a
+}
+
+nav.navbar-container {
+    padding: 20px 0 20px 0;
+}
+
+.navbar-container.shrink {
+    padding: 0;
+}
+
+#mainNav .navbar-toggler {
+	font-size: 12px;
+	right: 0;
+	padding: 13px;
+	text-transform: uppercase;
+	color: white;
+	border: 0;
+    
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+	font-size: 14px;
+	font-weight: 400;
+	padding: 12px 10px;
+	letter-spacing: 1px;
+	color: white;
+	transition: all .5s;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+	color: blue;
+}
+
+nav.shrink {
+    background-color: red !important;
+}
+
+
+.navbar-brand.shrink,
+.navbar-container.shrink,
+.navbar.fixed-top.shrink,
+.navbar-brand,
+.navbar-container{
+    transition: 0.8s;
+    -webkit-transition:  0.8s;
+}
+
+/* --- Buttons --- */
+
+.main-btn, .white-btn {
+    display: inline-block;
+    padding: 10px 35px;
+    margin: 20px;
+    border: 2px solid transparent;
+    transition: .2s opacity;
+    -webkit-transition: .2s opacity;
+}
+
+.main-btn {
+    background-color: red;
+    color: #fff;
+}
+
+.white-btn {
+    background-color: #fff;
+    color: #FD8A10;
+}
+
+.main-btn:hover, .white-btn:hover {
+    opacity: .8;
+    background-color: blue;
+}
+
+.addCategoryBtn {
+    margin-bottom: 51px;
+}
+
+.darkModeBtn {
+    background-color: transparent !important;
+}
+
+.darkMode {
+    background-color: rgb(51, 51, 51) !important;
+    color: white !important;
+} 
+
+/* --- Footer --- */
+
+footer {
+	width: 100%;
+	margin-top: 50px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	background-color: #2a2a2a;
+}
+
+.footer-follow {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.footer-follow li {
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px
+}
+
+.footer-follow i {
+	color: red;
+}
+
+.footer-follow i:hover {
+	color: blue;
+}
+
+.footer-follow li a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 24px;
+}
+
+
+.footer-copyrights p{
+	text-align: center;
+	font-size: 14px;
+	margin: 0;
+	text-transform: uppercase;
+
+}
+
+
+/* --- Contact Section --- */
+
+.page-image-contact {
+    background: linear-gradient( rgba(20, 20, 20, .8), rgba(20, 20, 20, .8)), url("../img/contactBG.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+    
+}
+
+#contact {
+    margin-top: 50px;
+    margin-bottom: 57px;
+}
+
+
+#contact .form-group {
+	margin-bottom: 25px;
+}
+
+#contact .form-group input,
+#contact .form-group textarea {
+	padding: 20px;
+}
+
+#contact .form-group input.form-control {
+	height: auto;
+}
+
+#contact .form-group textarea.form-control {
+	height: 248px;
+}
+
+#contact .form-control:focus {
+	border-color: red;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#contact::-webkit-input-placeholder {
+	font-weight: 700;
+	color: #ced4da;
+}
+
+#contact:-moz-placeholder {
+	font-weight: 700;
+	color: #ced4da;
+}
+
+#contact::-moz-placeholder {
+	font-weight: 700;
+	color: #ced4da;
+}
+
+#contact:-ms-input-placeholder {
+	font-weight: 700;
+	color: #ced4da;
+}
+
+.loginSection {
+    margin-bottom: 148px !important;
+}
+
+
+/* --- Blog Section --- */
+
+
+.page-image-blog {
+    background: linear-gradient( rgba(20, 20, 20, .8), rgba(20, 20, 20, .8)), url("../img/blogBG.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+    
+}
+
+#blog {
+	margin-top: 50px;
+}
+
+.blog {
+    margin: 15px 0px;
+    
+}
+
+.blog .blog-content {
+    padding: 10px 0px ;
+}
+
+.blog .blog-meta {
+    margin-bottom: 20px;
+    
+}
+
+.blog .blog-meta li {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.blog .blog-meta li i {
+    margin-right: 5px;
+    color: red;
+}
+
+.pagination-nav {
+    margin-left: 280px;
+    
+}
+
+/* --- Blog sidebar --- */
+
+#aside .widget {
+    margin-bottom: 40px;
+}
+
+.widget h3 {
+  text-transform: uppercase;
+}
+
+/* -- Search Sidebar -- */
+
+#aside .widget-search {
+    position: relative;
+}
+
+#aside .widget-search .search-input {
+    padding-right: 50px;
+    background-color: transparent;
+}
+
+#aside .widget-search .search-btn {
+    position: absolute;
+    right: 0px;
+	bottom: 0px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    line-height: 40px;
+    color: red !important;
+}
+
+/* --- Category Sidebar --- */
+
+.widget-category a {
+    display: block;
+    font-size: 14px;
+    /* color: #354052; */
+    border-bottom: 1px solid #EEE;
+    padding: 5px;
+}
+
+.widget-category a:nth-child(1) {
+  border-top: 1px solid #EEE;
+}
+
+.widget-category a span {
+    float: right;
+    color: red;
+}
+
+.widget-category a:hover {
+    color: red;
+}
+
+/* --- Twitter Sidebar --- */
+
+
+/* --- Post Sidebar --- */
+
+.widget-post {
+    min-height: 70px;
+    margin-bottom: 25px;
+}
+
+.widget-post img {
+    display: block;
+    float: left;
+    width: 85px;
+    height: auto;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.widget-post a {
+    display: block;
+}
+
+.widget-post a:hover {
+    color: red;
+}
+
+.widget-post .blog-meta {
+    display: inline-block;
+}
+
+.widget-post .blog-meta li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.widget-post li i {
+    color: red;
+    margin-right: 5px;
+}
+
+span.writer {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+#aside {
+    margin-top: 15px;
+}
+
+/* --- Searc Sidebar --- */
+
+
+
+/*  --- Blog --- */
+
+.blog {
+    margin: 15px 0px;
+    
+}
+
+.homeBlog {
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s linear;
+}
+
+.homeBlog:hover {
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
+
+.blog .blog-content {
+    padding: 20px 20px 40px;
+}
+
+.blog .blog-meta {
+    margin-bottom: 20px;
+}
+
+
+/*  --- Blog Post --- */
+
+#main .blog .blog-content {
+  padding: 20px 0px 0px;
+}
+
+/* --- Blog Author --- */
+
+.blog-author {
+    margin: 40px 0px;
+}
+
+.blog-author .media .media-left {
+    padding-right: 20px;
+}
+
+.blog-author .media {
+    padding: 20px;
+    border: 1px solid #EEE;
+}
+
+.blog-author .media .media-heading {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EEE;
+}
+
+.blog-author .media .media-heading h3 {
+    display: inline-block;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/*  --- ADMİN/POST --- */
+
+.postTable{
+    margin-bottom: 170px;
+}
+
+.postlarPage {
+    margin-top: 15vh;
+}
+
+.categoryPage {
+    margin-top: 15vh;
+}
+
+

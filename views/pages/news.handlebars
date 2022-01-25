@@ -1,0 +1,116 @@
+<!-- <HABERLER SAYFASI> -->
+<section id="blog" class="md-padding">
+	<div class="container">
+
+		<div class="row">
+
+			<main id="main" class="col-md-8">
+				<!-- <Blog Posts> -->
+				<div class="row">
+					{{#each news}}
+					<div class="col-md-6">
+						<div class="blog homeBlog lightMode">
+							<div class="blog-img">
+								<a target="_blank" href="{{url}}">
+									<img src="{{image}}" class="img-fluid">
+								</a>
+							</div>
+							<div class="blog-content">
+								<ul class="blog-meta">
+									<li><i class="fas fa-users"></i><span class="writer">{{source}}</span></li>
+									<li><i class="fas fa-clock"></i><span class="writer">{{generateDate date 'MMM DD YYYY'}}</span></li>
+								</ul>
+								<h3>{{name}}</h3>
+
+								<p>{{{truncate description}}}</p>
+
+								<a target="_blank" href="{{url}}">Devamını Oku</a>
+							</div>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+				<!-- </Blog Posts> -->
+
+				<!-- <Pagination> -->
+				<div class="row">
+					<nav class="pagination-nav" aria-label="Page navigation example">
+						<ul class="pagination justify-content-center">
+
+							{{#paginate current=current pages=pages}}
+							{{/paginate}}
+
+						</ul>
+					</nav>
+				</div>
+				<!-- </Pagination> -->
+
+			</main>
+
+			<!-- <Sidebar> -->
+			<aside id="aside" class="col-md-4">
+
+				<!-- TRT Haber Sitene Ekle -->
+				<div style="font: normal 11px Arial; width: 348px; border: solid 1px #ccc; background: #fff; border-radius: 3px; box-shadow: 1px 1px 3px #ccc;" class="mb-5">
+					<h2 style="padding: 8px; margin: 0; height: 25px; border: 0; border-bottom: solid 1px #ccc;">
+						<a href="https://www.trthaber.com/">
+							<img src="https://trthaberstatic.cdn.wp.trt.com.tr/static/images/siteneEkle/logo_a_v3.png" alt="TRT Haber Haberler" style="border: none 0;">
+						</a>
+					</h2>
+					<iframe frameborder="0" width="348" height="282" src="https://www.trthaber.com/sitene-ekle/dunya-4/?haberSay=10&renk=a&baslik=1&resimler=1"></iframe>
+					<div style="text-align: center;line-height: 23px;border-top: solid 1px #ccc; color: #666; margin-top: 5px;box-shadow: 0 -1px 3px #ccc;">
+						<a style="text-decoration: none;color: #666; font: normal 11px Arial;" href="https://www.trthaber.com/">En Son Haberler</a> &nbsp;|&nbsp; <a style="text-decoration: none;color: #666; font: normal 11px Arial;" href="https://www.trthaber.com/haber/dunya/">Dünya Haberleri</a>
+					</div>
+				</div>
+				<!-- /TRT Haber Sitene Ekle -->
+
+				<!-- Haberler Sidebar -->
+				<div class="widget">
+					<h3 class="mb-3">Son Eklenen Haberler</h3>
+
+					<!-- SİNGLE POST -->
+					{{#each (limit news 3)}}
+
+					<div class="widget-post">
+						<a href="{{url}}" target="_blank">
+							<img class="img-fluid" src="{{image}}" alt="">{{name}}
+						</a>
+						<ul class="blog-meta">
+							<li>{{generateDate date 'MM DD YYYY'}}</li>
+						</ul>
+					</div>
+					{{/each}}
+					<!-- /SİNGLE POST -->
+
+				</div>
+				<!-- /Haberler Sidebar -->
+
+				<!-- Exchange Embed  -->
+				<div class="widget">
+					<div class="widget-exchange">
+
+						<script type="text/javascript">
+						var kurlist=",ONS,USD,EUR,GRA,1,1027,";
+						var genislik=350;
+						var bbg="FF0000";
+						var yr="000000";
+						var zbg="FFFFFF";
+						var br="FF0000";
+						var by="Döviz Fiyatları"
+						</script>
+						<ins data-client-id="mb-095720171805"></ins>
+						<a id="bplnk" href="https://www.dovizfiyat.com">Döviz Fiyatları</a>
+						<script type="text/javascript" src="https://www.dovizfiyat.com/eklenti/eklenti-min.js"></script>
+
+					</div>
+
+				</div>
+				<!-- /Exchane Embed  -->
+
+			</aside>
+			<!-- </Sidebar> -->
+
+		</div>
+
+	</div>
+</section>

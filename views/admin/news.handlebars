@@ -1,0 +1,53 @@
+<!-- <PAGE TİTLE> -->
+<div class="row text-center postlarPage">
+	<div class="col-md-4 offset-md-4">
+		<div class="section-header">
+			<h2 class="title">Haberler</h2>
+		</div>
+	</div>
+</div>
+
+<!-- <CONTENT SECTİON> -->
+
+<section id="aboutus" class="md-padding">
+	<div class="container">
+
+		{{> admin-nav}}
+		<div class="clearfix"></div>
+		<div class="row">
+
+
+			<div class="col-md-12">
+				<table class="table postTable">
+					<thead>
+						<tr>
+							<th>Başlık</th>
+							<th>Kaynak</th>
+							<th>Link/ID</th>
+							<th>Sil</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each news}}
+						<tr>
+							<td>{{name}}</td>
+							<td>{{source}}</td>
+							<td><a href="{{url}}">{{_id}}</a></td>
+							<td>	
+								
+								<form action="/admin/news/{{id}}?_method=DELETE" method="POST">
+									<input type="hidden" name="_method" value="DELETE">
+									<button type="submit" class="btn btn-danger">Sil</button>
+								</form>
+								
+							</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+</section>

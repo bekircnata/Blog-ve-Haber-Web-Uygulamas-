@@ -1,0 +1,63 @@
+<!-- <POST EKLEME> -->
+<section id="contact" class="md-padding">
+	<div class="container">
+
+			<!-- <Page Title> -->
+			<div class="row text-center">
+				<div class="col-md-4 offset-md-4">
+					<div class="section-header">
+						<h2 class="title">Post Ekle</h2>
+					</div>
+				</div>
+			</div>
+			<!-- </Page Title> -->
+
+		<div class="row">
+			<div class="col-lg-12">
+				<form action="/posts/test" method="POST" enctype="multipart/form-data">
+					<div class="row">
+						<div class="offset-2 col-md-8">
+							<!-- <Post Title Form> -->
+                            <div class="form-group">
+								<input class="form-control" name="title" type="text" placeholder="Post Başlık  *">
+								<p class="help-block text-danger"></p>
+							</div>
+							<!-- </Post Title Form> -->
+
+							<!-- <Post Content Form> -->
+							<div class="form-group">
+								<textarea class="form-control addpost" name="content" placeholder="Post İçerik *"></textarea>
+								<p class="help-block text-danger"></p>
+							</div>
+							<!-- </Post Content Form> -->
+
+							<!-- <Post Category Form> -->
+							<div class="form-group">
+								<select class="form-control" name="category">
+									{{#each categories}}
+									<option value="{{id}}">{{name}}</option>
+									{{/each}}
+								</select>
+							</div>
+							<!-- </Post Category Form> -->
+
+							<!-- <Post Image Form> -->
+							<div class="form-group">
+								<input class="form-control" name="postImage" type="file" required="required" data-validation-required-message="Please enter your image.">
+								<p class="help-block text-danger"></p>
+							</div>
+							<!-- </Post Image Form> -->
+							
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-lg-12 text-center">
+							<div id="success"></div>
+							<button class="main-btn" type="submit">Post Ekle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</section>

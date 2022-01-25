@@ -1,0 +1,40 @@
+<!-- <POST İÇERİĞİ> -->
+
+<section id="blog" class="md-padding">
+	<div class="container">
+		<div class="row">
+			<!-- <Main> -->
+			<main id="main" class="col-md-8">
+				<div class="blog">
+
+					<!-- <Blog Image> -->
+					<div class="blog-img">
+						<img class="img-fluid" src="{{post.postImage}}" alt="">
+					</div>
+					<!-- </Blog Image> -->
+
+					<!-- <Blog Content> -->
+					<div class="blog-content">
+						<ul class="blog-meta">
+							<li><i class="fas fa-user"></i>{{post.author.username}}</li>
+							<li><i class="fas fa-clock"></i>{{generateDate post.date 'MMM DD YYYY'}}</li>
+						</ul>
+						<h3>{{post.title}}</h3>
+						<p>{{{post.content}}}.</p>
+						<p></p>
+						
+					</div>
+					<!-- </Blog Content> -->
+
+				</div>
+			</main>
+			<!-- </Main> -->
+			
+			<!-- Sidebar -->
+			{{> sidebar}}
+			<!-- /Sidebar -->
+
+		</div>
+
+	</div>
+</section>

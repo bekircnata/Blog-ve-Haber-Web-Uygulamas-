@@ -1,0 +1,57 @@
+<nav class="navbar navbar-container navbar-expand-lg fixed-top" id="mainNav">
+	<div class="container">
+		<a class="navbar-brand js-scroll-trigger" href="/blog">
+			Blog App
+		</a>
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			Menu
+			<i class="fas fa-bars"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav text-uppercase ml-auto">
+				<li class="nav-item">
+						<a class="nav-link" href="/blog">Anasayfa</a>
+				</li>
+
+				<li class="nav-item">
+						<a class="nav-link" href="/news">Haberler</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/contact">İletişim</a>
+				</li>
+
+				{{#if displayLink}}
+				<li class="nav-item">
+						<a class="nav-link" href="/admin/posts">Admin</a>
+				</li>
+				{{/if}}
+
+				{{#if displayLink}}
+				<li class="nav-item">
+					<a class="nav-link" href="/posts/new">Post Ekle</a>
+				</li>
+				{{/if}}
+				
+				{{#unless displayLink}}
+				<li class="nav-item">
+					<a class="nav-link" href="/users/login">Giriş</a>
+				</li>
+				{{/unless}}
+
+				{{#if displayLink}}
+				<li class="nav-item">
+					<a class="nav-link" href="/users/logout">Çıkış</a>
+				</li>
+				{{/if}}
+
+				<li class="nav-item">
+					<button class="btn darkModeBtn" onclick="darkModeF()">
+						<i class="fas fa-adjust"></i>
+					</button>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>

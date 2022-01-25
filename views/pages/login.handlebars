@@ -1,0 +1,57 @@
+<!-- <GİRİŞ SAYFASI> -->
+
+<section id="contact" class="loginSection md-padding">
+	<div class="container">
+
+			<!-- <Page Title> -->
+			<div class="row text-center">
+				<div class="col-md-4 offset-md-4">
+					<div class="section-header">
+						<h2 class="title">Giriş</h2>
+					</div>
+				</div>
+			</div>
+			<!-- </Page Title> -->
+
+		<div class="row">
+			<div class="col-lg-12">
+
+				<!-- <Flash Message> -->
+				{{#if sessionFlash.message}}
+					<div class="{{sessionFlash.type}}">
+						{{sessionFlash.message}}
+					</div>
+				{{/if}}
+				<!-- </Flash Message> -->
+
+				<form action="/users/login" method="POST">
+					<div class="row">
+						<div class="offset-2 col-md-8">
+							
+							<!-- <Login Form E-mail> -->
+							<div class="form-group">
+								<input class="form-control" name="email" type="email" placeholder="E-mail *" required="required" data-validation-required-message="Please enter your email address.">
+								<p class="help-block text-danger"></p>
+							</div>
+							<!-- </Login Form E-mail> -->
+
+							<!-- <Login Form Password> -->
+							<div class="form-group">
+								<input class="form-control" name="password" type="password" placeholder="Şifre *" required="required" data-validation-required-message="Please enter your password.">
+								<p class="help-block text-danger"></p>
+							</div>
+							<!-- </Login Form Password> -->
+							
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-lg-12 text-center">
+							<div id="success"></div>
+							<button id="sendLoginButton" class="main-btn" type="submit">Giriş</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</section>

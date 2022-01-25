@@ -1,0 +1,66 @@
+<!-- *** PAGE TİTLE *** -->
+<div class="row text-center categoryPage">
+	<div class="col-md-4 offset-md-4">
+		<div class="section-header">
+			<h2 class="title">Kategoriler</h2>
+		</div>
+	</div>
+</div>
+
+<!-- *** CONTENT SECTİON *** -->
+<section id="aboutus" class="md-padding">
+	<div class="container">
+
+		{{> admin-nav}} <!-- admin navbar-->
+		<div class="clearfix"></div>
+		<div class="row">
+
+			<div class="col-md-4">
+				<form action="" method="POST" enctype="multipart/form-data">
+					<div class="row mt-5">
+						<div class="col-md-10">
+							<div class="form-group">
+								<input class="form-control" name="name" type="text" placeholder="Kategori Adı  *"
+									required="required" data-validation-required-message="Please enter category name.">
+								<p class="help-block text-danger"></p>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-lg-12">
+							<div id="success"></div>
+							<button class="main-btn addCategoryBtn" style="margin-left: 0;" type="submit">Kategori Ekle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="col-md-8">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Kategori Adı</th>
+							<th>Sil</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each categories}}
+						<tr>
+							<td>{{id}}</td>
+							<td>{{name}}</td>
+							<td>
+								<form action="/admin/categories/{{id}}?_method=DELETE" method="POST">
+									<input type="hidden" name="_method" value="DELETE">
+									<button type="submit" class="btn btn-danger">Sil</button>
+								</form>
+							</td>
+						</tr>
+						{{/each}}
+					</tbody>	
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+</section>
