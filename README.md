@@ -3,6 +3,7 @@ Proje bir blog ve haber uygulamasıdır.
 Blog tarafında adminler yeni içerikler ekleyebilir silebilir veya güncelleme işlemleri gerçekleştirebilirler.
 Haber tarafında ise kullanılan API'dan her 30 dakikada 8 adet haber lisetelnecek şekilde bir filtre uygulanmıştır.
 API'dan gelen haberler veritabanı üzerine kaydedilmktedir.
+Proje responive bir yapıya sahiptir her cihazda tasarım bozulmadan kullanılabilir.
 Projede hem güncel haberlere yer verilmektedir hemde kullanıcılara özel içerik üretmek adına blog sayfası özelliklerini içinde barındırmaktadır.
 
 ## Projede Kullandıklarım
