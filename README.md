@@ -9,4 +9,7 @@ Projeyi kendi bilgisayarımızda visual studio code üzerinden açıyoruz.
 Terminali açıp 'npm start' komutu ile projeyi başlatabiliriz.
 Daha sonra tarayıcımızdan http://localhost:3000/blog adresini arattığımızda projemiz karşımıza gelmiş olacaktır.
 
+## Proje Görselleri
+
+
   
