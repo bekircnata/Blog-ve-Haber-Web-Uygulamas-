@@ -11,5 +11,6 @@ Daha sonra tarayıcımızdan http://localhost:3000/blog adresini arattığımız
 
 ## Proje Görselleri
 
-
+### Anasayfa
+![BlogAnaSayfa](https://user-images.githubusercontent.com/71833177/150979587-ed4ac59f-9450-4380-aed2-30b6393882e4.PNG)
   
