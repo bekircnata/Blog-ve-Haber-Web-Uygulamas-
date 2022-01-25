@@ -5,7 +5,7 @@ Blog tarafında anasayfada adminlerin eklediği içerikler yer almaktadır.
 Adminler yeni içerikler ekleyebilir, silebilir veya güncelleme işlemleri gerçekleştirebilirler.
 Haber tarafında ise kullanılan API'dan her 30 dakikada 8 adet haber lisetelnecek şekilde bir filtre uygulanmıştır.
 API'dan gelen haberler veritabanı üzerine kaydedilmktedir.
-İletişim sayfasında yollanan mesajlar belirlenen mail adresine iletilmektedir. (routes/contact.js)/n
+İletişim sayfasında yollanan mesajlar belirlenen mail adresine iletilmektedir. (routes/contact.js)
 Projede hem güncel haberlere yer verilmektedir hemde kullanıcılara özel içerik üretmek adına blog sayfası özelliklerini içinde barındırmaktadır.
 
 ## Projede Kullandıklarım
