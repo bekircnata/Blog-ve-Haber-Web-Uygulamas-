@@ -15,3 +15,6 @@ Daha sonra tarayıcımızdan http://localhost:3000/blog adresini arattığımız
 ![BlogAnaSayfa](https://user-images.githubusercontent.com/71833177/150979587-ed4ac59f-9450-4380-aed2-30b6393882e4.PNG)
 
 ### Admin Sayfası
+![BlogAdminSayfası](https://user-images.githubusercontent.com/71833177/150980180-db4f7575-ef58-4583-957d-cbd414035dec.PNG)
+
+### Post Ekleme Formu
